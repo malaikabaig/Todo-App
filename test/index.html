@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ToDo-List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="feedback alert">Write value for item</div>
+      <!-- form -->
+      <form id="itemForm">
+        <h3>to do list</h3>
+        <div class="input-group">
+          <input type="text" id="itemInput" placeholder="name..." />
+          <div class="input-group-append">
+            <button id="add-item" class="btn" type="submit">Add item</button>
+          </div>
+        </div>
+      </form>
+      <div class="item-container">
+        <!-- end of form  -->
+        <div class="item-list">
+          <!-- single item -->
+          <!-- <div class="item ">
+            <div class="item-info">
+              <h6 class="item-index">
+                1
+                 
+              </h6>
+              <p class="item-name">
+                new item
+              
+              </p>
+            </div>
+            <div class="item-icons">
+              <i class="far fa-check-circle complete-item"></i>
+              <i class="far fa-edit edit-item"></i>
+              <i class="far fa-times-circle delete-item"></i>
+            </div>
+          </div> -->
+          <!-- end of single item -->
+        </div>
+        <button type="button" class="btn" id="clear-list">Clear items</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
