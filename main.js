@@ -8,17 +8,18 @@ const form = document.querySelector('#itemForm'),
 console.log(form, itemInput);
 
 let todoList = [];
-console.log('todoList ==>', todoList);
 
 // Get List
 const getList = function (todoList) {
-  itemList.innerHtml = '';
+  itemList.innerHTML = '';
+  console.log('todoList ==>', todoList);
+
   todoList?.forEach((item, index) => {
     itemList?.insertAdjacentHTML(
       'beforeend',
       `<div class="item">
             <div class="item-info">
-              <h6 class="item-index">${index}</h6>
+              <h6 class="item-index">${index + 1}</h6>
               <p class="item-name">${item}</p>
             </div>
             <div class="item-icons">
@@ -96,7 +97,7 @@ form.addEventListener('submit', function (e) {
   }
 
   itemInput.value = '';
-  window.location.reload();
+  // window.location.reload();
 });
 
 // Save and load to local storage
@@ -112,6 +113,7 @@ const getLocalstorage = function () {
     todoList = [];
   } else {
     todoList = JSON.parse(todoStorage);
+
     getList(todoList);
   }
 };
